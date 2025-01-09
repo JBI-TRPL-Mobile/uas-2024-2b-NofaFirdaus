@@ -16,4 +16,7 @@ class User {
       password: json['password'],
     );
   }
+   String toString() {
+    return 'User(name: $name, email: $email)';
+  }
 }

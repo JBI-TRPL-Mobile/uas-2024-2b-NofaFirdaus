@@ -13,7 +13,8 @@ class IntroPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // Image(image: )
+            Image.asset('assets/welcome.jpg'),
+
             Text("Hello world"),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

@@ -13,9 +13,9 @@ class DrawerComponent extends StatefulWidget {
 class _DrawerComponentState extends State<DrawerComponent> {
     int _currentIndex = 0;
     final _pages = [
-    const DashboardPage(),
+     DashboardPage(),
     const MessagePage(),
-    const ProfilePage()
+    ProfilePage()
   ];
   @override
   Widget build(BuildContext context) {

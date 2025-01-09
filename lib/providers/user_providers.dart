@@ -7,6 +7,7 @@ import 'package:template_project/models/user.dart';
 class UserProviders with ChangeNotifier{
  List<User> _users = [];
   List<User> get users => _users;
+  List<User> authenticatedUsers = [];
 
      Future<void> fetchUser() async {
     final String response = await rootBundle.loadString('assets/users.json');
@@ -24,7 +25,11 @@ class UserProviders with ChangeNotifier{
   }
 User? authenticate(String email, String password) {
   try {
-    
+     User user = _users.firstWhere(
+      (user) => user.email == email && user.password == password,
+    );
+    authenticatedUsers.add(user);
+
     return _users.firstWhere(
       (user) => user.email == email && user.password == password,
     );
